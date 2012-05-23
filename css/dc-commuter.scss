@@ -1,0 +1,21 @@
+/**
+ * Animatronic
+ * @license Copyright (C) 2012, Atomizer Software
+ * http://atomizersoft.net
+ *
+ * @author Atomizer Software
+ */
+
+body {
+  overflow: hidden;
+}
+
+#container {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+iframe #radar {
+  border: none;
+}

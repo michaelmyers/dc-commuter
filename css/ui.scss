@@ -1,0 +1,95 @@
+/**
+ * Animatronic
+ * @license Copyright (C) 2012, Atomizer Software
+ * http://atomizersoft.net
+ *
+ * @author Atomizer Software
+ */
+
+//Setup Up
+$panel-position: absolute;
+//change to fixed to have them remain on the screen when scrolling
+
+//Colors
+$panel-color: #000;
+$tab-color: #000;
+$text-color: #FFF;
+$opacity: 0.85;
+
+//Panel Size
+$panel-width: 330px;
+$panel-height: 400px;
+
+//Spacing
+$tab-spacing: 50px;
+$tab-padding: 60px;
+
+#ui {
+  color: $text-color;
+
+  .right {
+    right: 0;
+    padding-right: $tab-padding;
+    -moz-border-radius-topleft: 20px;
+    -webkit-border-top-left-radius: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+  }
+  .left {
+    left: 0;
+    padding-left: $tab-padding;
+    -moz-border-radius-topright: 20px;
+    -webkit-border-top-right-radius: 20px;
+    -moz-border-radius-bottomright: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+  }
+  .panel {
+    position: $panel-position;
+    top: $tab-spacing;
+    display: none;
+    background: $panel-color;
+    width: $panel-width;
+    height: auto;
+    filter: alpha(opacity = $opacity * 100);
+    opacity: $opacity;
+  }
+
+  .tab {
+    position: $panel-position;
+    text-decoration: none;
+    top: $tab-spacing;
+    font-size: 16px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    color: $text-color;
+    background: $tab-color;
+    padding: 5px 15px 5px 5px;
+    display: block;
+    filter: alpha(opacity = $opacity * 100);
+    opacity: $opacity;
+  }
+  a .left {
+    padding-left: 0;
+
+  }
+  a .right {
+    padding-right: 0;
+  }
+}
+
+/*a .tab .right {
+right:0;
+-moz-border-radius-topleft: 20px;
+-webkit-border-top-left-radius: 20px;
+-moz-border-radius-bottomleft: 20px;
+-webkit-border-bottom-left-radius: 20px;
+}
+a .tab .left {
+left:0;
+-moz-border-radius-topright: 20px;
+-webkit-border-top-right-radius: 20px;
+-moz-border-radius-bottomright: 20px;
+-webkit-border-bottom-right-radius: 20px;
+}       */
+//} //end #ui
+

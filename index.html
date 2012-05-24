@@ -56,7 +56,7 @@ chromium.org/developers/how-tos/chrome-frame-getting-started -->
     different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>
     to experience this site.</p><![endif]-->
 <header>
-<img id="dc-commuter-logo" src="img/dc-commuter-50.png">
+    <img id="dc-commuter-logo" src="img/dc-commuter-50.png">
 </header>
 <div id="container">
     <div role="main">
@@ -64,7 +64,8 @@ chromium.org/developers/how-tos/chrome-frame-getting-started -->
     </div>
     <footer>
         <div id="info-container">
-            <small><b>Built by: </b></small><img src="img/AtomizerSoftware-170x90.png"><br/>
+            <small><b>Built by: </b></small>
+            <img src="img/AtomizerSoftware-170x90.png"><br/>
             <small><b>Radar Image by the </b><a href="http://www.nws.noaa.gov">National Weather Service</a></small>
 
         </div>
@@ -76,7 +77,8 @@ chromium.org/developers/how-tos/chrome-frame-getting-started -->
     <div id="metro" class="panel right">
         <div class="panel-content">
             <div style="background-color: white;">
-            <iframe width="465" height="418" src="http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=96"></iframe>
+                <iframe width="465" height="418"
+                        src="http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=96"></iframe>
             </div>
         </div>
     </div>
@@ -90,10 +92,20 @@ chromium.org/developers/how-tos/chrome-frame-getting-started -->
             <iframe src="map-test.html" width="100%" height="100%" style=""></iframe>
         </div>
     </div>
+    <div id="forecast" class="panel left">
+        <div class="panel-content">
+            <span style="display: block !important; width: 320px; text-align: center; font-family: sans-serif; font-size: 12px;"><a
+                    href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:20001.1.99999&bannertypeclick=wu_clean2day"
+                    title="Washington, District of Columbia Weather Forecast"><img
+                    src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_clean2day_cond&airportcode=KDCA&ForcedCity=Washington&ForcedState=DC&zipcode=20001&language=EN"
+                    alt="Find more about Weather in Washington, DC" width="300"/></a><br></span>
+        </div>
+    </div>
     <div style="clear:both;"></div>
     <a class="right tab" href="#metro">Metro</a>
     <!--<a class="left tab" href="#traffic" style="top:150px">Traffic</a> -->
     <a class="left tab" href="#traffic2" style="top:500px">Traffic</a>
+    <a class="left tab" href="#forecast">Forecast</a>
 </div>
 
 

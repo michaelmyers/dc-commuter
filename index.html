@@ -30,7 +30,7 @@ _/_/_/      _/_/    _/            _/          _/  _/      _/    _/  _/    _/  _/
  More info: h5bp.com/i/378 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>HTML5 UI Framework</title>
+    <title> commuter</title>
     <meta name="description" content="">
 
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
@@ -56,44 +56,44 @@ chromium.org/developers/how-tos/chrome-frame-getting-started -->
     different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>
     to experience this site.</p><![endif]-->
 <header>
-
+<img id="dc-commuter-logo" src="img/dc-commuter-50.png">
 </header>
 <div id="container">
     <div role="main">
-    <!-- end main -->
-        <iframe id="radar" height="100%" width="100%" seamless="seamless" src="http://radar.weather.gov/Conus/full_loop.php" scrolling="no" >
-            <H1>Your browser does not support iFrames, you should join 2007</H1>
-        </iframe>
+        <div id="radar-container"></div>
     </div>
     <footer>
+        <div id="info-container">
+            <small><b>Built by: </b></small><img src="img/AtomizerSoftware-170x90.png"><br/>
+            <small><b>Radar Image by the </b><a href="http://www.nws.noaa.gov">National Weather Service</a></small>
+
+        </div>
 
     </footer>
 </div>
 <!-- end container -->
 <div id="ui">
-    <div id="info" class="panel left">
+    <div id="metro" class="panel right">
         <div class="panel-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat
-                mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida
-                tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit
-                tincidunt arcu semper egestas. Mauris interdum fringilla nisi. Cras a dapibus lectus. Praesent blandit
-                ullamcorper ornare. Nam hendrerit sollicitudin urna non ultricies. Phasellus condimentum auctor risus, at
-                accumsan tellus tempor vel. Nunc mattis eleifend dolor at adipiscing.</p>
+            <div style="background-color: white;">
+            <iframe width="465" height="418" src="http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=96"></iframe>
+            </div>
         </div>
     </div>
-    <div id="data" class="panel right">
+    <div id="traffic" class="panel left" style="top:150px;width:450px;height:375px">
         <div class="panel-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat
-                mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida
-                tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit
-                tincidunt arcu semper egestas. Mauris interdum fringilla nisi. Cras a dapibus lectus. Praesent blandit
-                ullamcorper ornare. Nam hendrerit sollicitudin urna non ultricies. Phasellus condimentum auctor risus, at
-                accumsan tellus tempor vel. Nunc mattis eleifend dolor at adipiscing.</p>
+            <div id="map_canvas" style="width:100%; height:100%"></div>
+        </div>
+    </div>
+    <div id="traffic2" class="panel left" style="top:500px;width:450px;height:375px">
+        <div class="panel-content">
+            <iframe src="map-test.html" width="100%" height="100%" style=""></iframe>
         </div>
     </div>
     <div style="clear:both;"></div>
-    <a class="left tab" href="#info">Info</a>
-    <a class="right tab" href="#data">Data</a>
+    <a class="right tab" href="#metro">Metro</a>
+    <!--<a class="left tab" href="#traffic" style="top:150px">Traffic</a> -->
+    <a class="left tab" href="#traffic2" style="top:500px">Traffic</a>
 </div>
 
 
@@ -102,6 +102,11 @@ chromium.org/developers/how-tos/chrome-frame-getting-started -->
 <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+<!-- Google Maps API -->
+<script type="text/javascript"
+        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBDS9-7CQpwjSuvnusLz3VLJsI6OafNREI&sensor=false">
+</script>
 
 <!-- scripts concatenated and minified via build script -->
 <script src="js/plugins.js"></script>

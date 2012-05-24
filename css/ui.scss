@@ -7,18 +7,23 @@
  */
 
 //Setup Up
-$panel-position: absolute;
+$panel-position: absolute;//fixed;
 //change to fixed to have them remain on the screen when scrolling
 
 //Colors
 $panel-color: #000;
 $tab-color: #000;
+$tab-color-active:#000FFF;
 $text-color: #FFF;
 $opacity: 0.85;
 
 //Panel Size
 $panel-width: 330px;
 $panel-height: 400px;
+$panel-radius: 20px;
+
+//Tab Size
+$tab-radius: 20px;
 
 //Spacing
 $tab-spacing: 50px;
@@ -30,34 +35,44 @@ $tab-padding: 60px;
   .right {
     right: 0;
     padding-right: $tab-padding;
-    -moz-border-radius-topleft: 20px;
-    -webkit-border-top-left-radius: 20px;
-    -moz-border-radius-bottomleft: 20px;
-    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: $panel-radius;
+    -webkit-border-top-left-radius: $panel-radius;
+    border-top-left-radius: $panel-radius;
+    -moz-border-radius-bottomleft: $panel-radius;
+    -webkit-border-bottom-left-radius: $panel-radius;
+    border-bottom-left-radius: $panel-radius;
   }
   .left {
     left: 0;
     padding-left: $tab-padding;
-    -moz-border-radius-topright: 20px;
-    -webkit-border-top-right-radius: 20px;
-    -moz-border-radius-bottomright: 20px;
-    -webkit-border-bottom-right-radius: 20px;
+    -moz-border-radius-topright: $panel-radius;
+    -webkit-border-top-right-radius: $panel-radius;
+    border-top-right-radius: $panel-radius;
+    -moz-border-radius-bottomright: $panel-radius;
+    -webkit-border-bottom-right-radius: $panel-radius;
+    border-bottom-right-radius: $panel-radius;
   }
   .panel {
     position: $panel-position;
-    top: $tab-spacing;
+    top: $tab-spacing; //possible to have JS control this or add inline
     display: none;
     background: $panel-color;
-    width: $panel-width;
+    width: auto; //$panel-width;
     height: auto;
     filter: alpha(opacity = $opacity * 100);
     opacity: $opacity;
   }
 
+  .panel-content {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
   .tab {
     position: $panel-position;
     text-decoration: none;
-    top: $tab-spacing;
+    top: $tab-spacing; //possible to have JS control this
     font-size: 16px;
     letter-spacing: -1px;
     font-weight: 700;
@@ -65,15 +80,21 @@ $tab-padding: 60px;
     background: $tab-color;
     padding: 5px 15px 5px 5px;
     display: block;
-    filter: alpha(opacity = $opacity * 100);
+    filter: alpha(opacity = ($opacity * 100));
     opacity: $opacity;
   }
   a .left {
     padding-left: 0;
+    padding-right: 5px;
 
   }
   a .right {
     padding-right: 0;
+    padding-left: 5px;
+  }
+
+  .active {
+    background: $tab-color-active;
   }
 }
 

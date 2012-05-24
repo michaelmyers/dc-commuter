@@ -12,24 +12,32 @@
     padding-right: 60px;
     -moz-border-radius-topleft: 20px;
     -webkit-border-top-left-radius: 20px;
+    border-top-left-radius: 20px;
     -moz-border-radius-bottomleft: 20px;
-    -webkit-border-bottom-left-radius: 20px; }
+    -webkit-border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 20px; }
   #ui .left {
     left: 0;
     padding-left: 60px;
     -moz-border-radius-topright: 20px;
     -webkit-border-top-right-radius: 20px;
+    border-top-right-radius: 20px;
     -moz-border-radius-bottomright: 20px;
-    -webkit-border-bottom-right-radius: 20px; }
+    -webkit-border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 20px; }
   #ui .panel {
     position: absolute;
     top: 50px;
     display: none;
     background: black;
-    width: 330px;
+    width: auto;
     height: auto;
     filter: alpha(opacity=85);
     opacity: 0.85; }
+  #ui .panel-content {
+    display: block;
+    height: 100%;
+    width: 100%; }
   #ui .tab {
     position: absolute;
     text-decoration: none;
@@ -44,9 +52,13 @@
     filter: alpha(opacity=85);
     opacity: 0.85; }
   #ui a .left {
-    padding-left: 0; }
+    padding-left: 0;
+    padding-right: 5px; }
   #ui a .right {
-    padding-right: 0; }
+    padding-right: 0;
+    padding-left: 5px; }
+  #ui .active {
+    background: #000fff; }
 
 /*a .tab .right {
 right:0;

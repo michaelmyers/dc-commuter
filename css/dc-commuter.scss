@@ -8,12 +8,41 @@
 
 body {
   overflow: hidden;
+  background-color: #A0CFEC; //#87ceeb;
+}
+
+#dc-commuter-logo {
+  position: absolute;
+  top:10px;
+  left: 10px;
+}
+
+#info-container {
+  position: absolute;
+  width: auto;
+  //height: auto;
+  float:right;
+  bottom: 0;
+  right: 0;
 }
 
 #container {
   clear: both;
   margin: 0;
   padding: 0;
+}
+
+#map_canvas {
+  opacity: 0;
+}
+
+#radar-container {
+  display: block;
+  width: auto;
+  height: 980px;
+  background-image: url(http://radar.weather.gov/Conus/Loop/NatLoop.gif);
+  background-position: -2200px -350px;
+  background-repeat: no-repeat;
 }
 
 iframe #radar {
